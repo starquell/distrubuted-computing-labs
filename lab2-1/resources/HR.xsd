@@ -1,0 +1,38 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="hr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:decimal" name="maxID"/>
+        <xs:element name="departments">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="department" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:decimal" name="id"/>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element name="employees">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="employee">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:decimal" name="id"/>
+                                <xs:element type="xs:string" name="name"/>
+                                <xs:element type="xs:float" name="velocity"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
