@@ -1,0 +1,12 @@
+create table employees
+(
+	id serial not null PRIMARY KEY,
+	"departmentId" int
+		constraint employees_departments_id_fk
+			references departments,
+	name text not null,
+	velocity float default 0
+);
+
+create unique index employees_id_uindex
+	on employees (id);
